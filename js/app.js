@@ -32,6 +32,9 @@ const { cityDets, weather } = data;
     if(weather.IsDayTime){
         timeSrc = 'img/day.svg';
         document.body.style.backgroundColor = "#e1dbd6";
+        text_1.style.color = "#302e2e";
+        text_2.style.color = "#302e2e";
+
     } else{
         timeSrc = 'img/night.svg';
         document.body.style.backgroundColor = "black";
