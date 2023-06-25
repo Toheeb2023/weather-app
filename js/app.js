@@ -3,6 +3,8 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
+const text_2 = document.querySelector('label')
+const text_1 = document.querySelector('h1')
 const forecast = new Forecast();
 
 const updateUI = (data) => {
@@ -29,8 +31,12 @@ const { cityDets, weather } = data;
     let timeSrc = null;
     if(weather.IsDayTime){
         timeSrc = 'img/day.svg';
+        document.body.style.backgroundColor = "#e1dbd6";
     } else{
         timeSrc = 'img/night.svg';
+        document.body.style.backgroundColor = "black";
+        text_1.style.color = "#e1dbd6";
+        text_2.style.color = "#e1dbd6";
     }
 
     time.setAttribute('src', timeSrc);
